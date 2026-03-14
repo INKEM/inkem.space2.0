@@ -8,6 +8,9 @@
     import Icon from "@components/common/icon.svelte";
 
 
+    // 全局单例，避免重复加载和注册
+    let globalEcharts: any = null;
+
     let {
         posts = [],
         categories = [],
@@ -43,9 +46,9 @@
     let heatmapChart: any = $state();
     let categoriesChart: any = $state();
     let tagsChart: any = $state();
-    let isHeatmapLoading = $state(true);
-    let isCategoriesLoading = $state(true);
-    let isTagsLoading = $state(true);
+    let isHeatmapLoading = $state(false);
+    let isCategoriesLoading = $state(false);
+    let isTagsLoading = $state(false);
 
     let timeScale: 'year' | 'month' | 'day' = $state('year');
     let lastScale = $state<'year' | 'month' | 'day'>('year');
@@ -78,7 +81,7 @@
     };
 
     const loadECharts = async () => {
-        if (typeof window === 'undefined') return;
+        if (typeof window === 'undefined' || echarts) return;
         isDark = document.documentElement.classList.contains('dark');
 
         // 动态导入 ECharts 及其组件，启用 Tree Shaking
@@ -121,10 +124,6 @@
 
     const initActivityChart = async (isUpdate = false) => {
         if (!heatmapContainer || !echarts) return;
-        if (!isUpdate) isHeatmapLoading = true;
-
-        // 模拟加载延迟以测试效果
-        //if (!isUpdate) await new Promise(resolve => setTimeout(resolve, 300));
 
         // 尝试获取现有实例以支持 Swup 持久化
         const existingChart = echarts.getInstanceByDom(heatmapContainer);
@@ -229,8 +228,6 @@
 
     const initCategoriesChart = async (isUpdate = false) => {
         if (!categoriesContainer || !echarts) return;
-        if (!isUpdate) isCategoriesLoading = true;
-        if (!isUpdate) await new Promise(resolve => setTimeout(resolve, 300));
 
         const colors = getThemeColors();
         const fontFamily = getChartsFontFamily();
@@ -285,8 +282,6 @@
 
     const initTagsChart = async (isUpdate = false) => {
         if (!tagsContainer || !echarts) return;
-        if (!isUpdate) isTagsLoading = true;
-        if (!isUpdate) await new Promise(resolve => setTimeout(resolve, 300));
 
         const colors = getThemeColors();
         const fontFamily = getChartsFontFamily();
@@ -486,7 +481,7 @@
                         </div>
                     </div>
                 </div>
-                <div bind:this={heatmapContainer} class="heatmap-container transition-opacity duration-600" class:opacity-0={isHeatmapLoading}></div>
+                <div bind:this={heatmapContainer} class="heatmap-container"></div>
             </div>
 
             {#if isDesktop}
@@ -498,7 +493,7 @@
                             </div>
                         </div>
                     {/if}
-                    <div bind:this={categoriesContainer} class="radar-container transition-opacity duration-600" class:opacity-0={isCategoriesLoading}></div>
+                    <div bind:this={categoriesContainer} class="radar-container"></div>
                 </div>
 
                 <div class="chart-section radar-section">
@@ -509,7 +504,7 @@
                             </div>
                         </div>
                     {/if}
-                    <div bind:this={tagsContainer} class="radar-container transition-opacity duration-600" class:opacity-0={isTagsLoading}></div>
+                    <div bind:this={tagsContainer} class="radar-container"></div>
                 </div>
             {/if}
         </div>
