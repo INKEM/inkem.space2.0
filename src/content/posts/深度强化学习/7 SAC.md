@@ -194,5 +194,5 @@ SAC的算法流程如下：
 		4. 对每个转移样本$(s_i,a_i,r_i,s_{i+1})$，由动作选择器（目标网络）采样下一个动作$a_i'=f'_{\theta'}(\epsilon;s_{i+1})$，并计算其对数概率$\log\pi'_{\theta'}(a_i'|s_{i+1})$；
 		5. 计算样本批量的平均梯度更新每个Critic网络$$w_{t+1}^{(j)}=w_t^{(j)}-\alpha_{w^{(j)}}\frac1N\sum_{i=1}^N[(y_i-Q_{w^{(j)}}(s_i,a_i))\cdot\nabla_{w^{(j)}}Q_{w^{(j)}}(s_i,a_i)]$$
 		6. 计算样本批量的平均梯度更新Actor网络$$\theta_{t+1}=\theta_t+\alpha_\theta\frac1N\sum_{i=1}^N\nabla_\theta J_i(\theta)$$
-		7. 软更新目标网络$$\begin{split}\theta'\leftarrow\tau\theta+(1-\tau)\theta'\\w_j'\leftarrow\tau w_j+(1-\tau)w_j'\end{split}$$
+		7. 软更新目标网络$$\theta'\leftarrow\tau\theta+(1-\tau)\theta'\,w_j'\leftarrow\tau w_j+(1-\tau)w_j'$$
   3. 直到Actor网络和Critic网络收敛。
