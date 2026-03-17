@@ -79,7 +79,7 @@ $$
 
 $$
 \begin{split}
-&a=f_\theta(\epsilon;s)=\mu_\theta(s)+\sigma_\theta(s)\cdot\epsilon&\\
+&a=f_\theta(\epsilon;s)=\mu_\theta(s)+\sigma_\theta(s)\cdot\epsilon\\
 &\quad\epsilon\sim\mathcal N(0,I)
 \end{split}
 $$

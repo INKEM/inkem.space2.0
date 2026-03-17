@@ -157,8 +157,8 @@ $$
 
 $$
 \begin{split}
-&\nabla_\vartheta Q_\Omega(s',\omega)=\sum_a\pi_{\omega,\theta}(a|s')\sum_{s''}\gamma P(s''|s',a)\cdot\nabla_\vartheta U(\omega,s'')&\\
-&\nabla_\vartheta V_\Omega(s')=\sum_{\omega'}\pi_\Omega(\omega'|s')\sum_a\pi_{\omega',\theta}(a|s')\sum_{s''}\gamma P(s''|s',a)\cdot\nabla_\vartheta U(\omega',s'')&
+\nabla_\vartheta Q_\Omega(s',\omega)=\sum_a\pi_{\omega,\theta}(a|s')\sum_{s''}\gamma P(s''|s',a)\cdot\nabla_\vartheta U(\omega,s'')\\
+\nabla_\vartheta V_\Omega(s')=\sum_{\omega'}\pi_\Omega(\omega'|s')\sum_a\pi_{\omega',\theta}(a|s')\sum_{s''}\gamma P(s''|s',a)\cdot\nabla_\vartheta U(\omega',s'')
 \end{split}
 $$
 

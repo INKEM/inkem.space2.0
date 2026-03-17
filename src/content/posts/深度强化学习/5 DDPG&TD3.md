@@ -84,7 +84,7 @@ $$
 		3. 如果样本数量$|R|\geqslant N$，则随机采样一个小批量的$N$个转移样本$(s_i,a_i,r_i,s_{i+1})$；
 		4. 计算样本批量的平均TD误差梯度更新Critic网络$$w_{t+1}=w_t-\alpha_w\frac1N\sum_{i=1}^N(\delta_i\nabla_wQ_w(s_i,a_i))$$
 		5. 计算样本批量的平均策略梯度更新Actor网络$$\theta_{t+1}=\theta_t+\alpha_\theta\frac1N\sum_{i=1}^N(\nabla_\theta\mu_\theta(s_i)\nabla_aQ_{w}(s_i,a)|_{a=\mu_\theta(s)})$$
-		6. 软更新目标网络$$\begin{split}\theta'\leftarrow\tau\theta+(1-\tau)\theta'\\w'\leftarrow\tau w+(1-\tau)w'\end{split}$$
+		6. 软更新目标网络$$\theta'\leftarrow\tau\theta+(1-\tau)\theta'\,w'\leftarrow\tau w+(1-\tau)w'$$
 3. 直到Actor网络和Critic网络收敛。
 
 # TD3
