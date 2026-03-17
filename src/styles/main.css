@@ -7,6 +7,14 @@
 /* 导入动过渡样式 */
 @import './transition.css' layer(base);
 
+@font-face {
+  font-family: "EarlySummerSerif";
+  src: url("/assets/font/EarlySummerSerif-Medium.ttf") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
 @plugin '@tailwindcss/typography';
 
 

@@ -1,21 +1,24 @@
-# About This Site
+这里是一杯为品。
 
-Twilight is a CMS integrated static blog template built with [Astro](https://astro.build) framework.
+哈尔滨工业大学2023级智能机器人班在读。
 
-::github{repo="Spr-Aachen/Twilight"}
+致力于打造“大而美”的具身智能知识博客系列。
 
+同时探索一切美的事物。
 
-## Milestones
+更多关于我的故事，还请从博客深处寻找。
 
-- Integrated content management system in [#1](https://github.com/Spr-Aachen/Twilight/pull/1)
-- Seamless wallpaper mode switching in [#2](https://github.com/Spr-Aachen/Twilight/pull/2)
-- Dynamic content container response in [#47](https://github.com/Spr-Aachen/Twilight/pull/47)
-- Seamless page component loading in [#48](https://github.com/Spr-Aachen/Twilight/pull/48)
-- Smart music playback handling in [#49](https://github.com/Spr-Aachen/Twilight/pull/49)
-- Infinite-level navigation system in [#50](https://github.com/Spr-Aachen/Twilight/pull/50)
-- Comprehensive statistics dashboard in [#51](https://github.com/Spr-Aachen/Twilight/pull/51)
-- Low-barrier configuration scheme in [#58](https://github.com/Spr-Aachen/Twilight/pull/58)
-- Dynamic breakpoint handling in [#68](https://github.com/Spr-Aachen/Twilight/pull/68)
-- Advanced content management in [#73](https://github.com/Spr-Aachen/Twilight/pull/73)
-- Nested category support in [#74](https://github.com/Spr-Aachen/Twilight/pull/74)
-- Comprehensive music card plugin in [#81](https://github.com/Spr-Aachen/Twilight/pull/81)
+也许能帮助你快速认识我的MBTI标签：INTP-O-C（预言家，内向/直觉/思维/知觉-纠结-高冷）。
+
+全平台账号：
+
+- 微信公众号@一杯为品
+- 知乎@一杯为品
+
+> 虽然但是所有账号发的内容都一样……不过微信公众号带给我的反馈更有活人感，所以博主会更重视一些。当然还是推荐收藏我的专属博客网站来获取更丰富（应该）的更新内容和更良好的浏览体验叭。
+
+📬 联系邮箱：inkemspace@foxmail.com
+
+如果我的博客对你有帮助，不妨请我喝杯咖啡吧 ☕
+
+![](https://inkem-1306784622.cos.accelerate.myqcloud.com/blog/pic/%E5%85%AC%E5%91%8A.png)

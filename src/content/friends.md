@@ -1,18 +1,18 @@
 ---
 
-## How to Apply
+## 如何申请
 
-Please send your website information to: xxx@xxx.com
+请发送您的网站信息到：inkemspace@foxmail.com
 
-Email Subject:
+邮件主题：
 ```
-Request to Add Friend
+友链申请
 ```
 
-Email Content (Template):
+邮件内容（以我的站点为例）
 ```
-Site Name: [Your Site Name]
-Site Desc: [Your Site Description]
-Site Link: [Your Site Link]
-Avatar Link: [Your Avatar Link]
+站点名称：一杯为品的博客
+站点描述：二杯三杯也无妨
+站点链接：https://www.inkem.space
+头像链接：https://www.inkem.space/assets/images/avatar.webp
 ```
